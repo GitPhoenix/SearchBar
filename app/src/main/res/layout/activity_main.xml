@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.github.phoenix.widget.SlidingScrollView
+        android:id="@+id/slidingscrollview_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.github.phoenix.widget.ADViewPager
+                android:id="@+id/ad_search_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:text="搜索条"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="22dp"/>
+
+        </LinearLayout>
+
+    </com.github.phoenix.widget.SlidingScrollView>
+
+    <!--搜索条，放在文件尾就会浮在最上层；如果放在文件首就会被SlidingScrollView盖住-->
+    <RelativeLayout
+        android:id="@+id/rl_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:background="@android:color/holo_red_light">
+
+        <TextView
+            android:id="@+id/tv_search_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="贵阳市"
+            android:textColor="@android:color/darker_gray"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/tv_search_city"
+            android:layout_toLeftOf="@+id/iv_search_message"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_bg_edit">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_search"
+                android:layout_marginLeft="4dp"/>
+
+            <EditText
+                android:id="@+id/edt_search_info"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:textColor="#333"
+                android:layout_weight="1"
+                android:hint="搜索"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:id="@+id/iv_clear_search_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_edit_clear"
+                android:visibility="gone"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_search_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/img_message"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
