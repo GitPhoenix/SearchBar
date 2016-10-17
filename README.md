@@ -4,8 +4,8 @@
 具体应用请阅读：<http://www.jianshu.com/p/3564b08db10e>
 ######效果图：
 
-![SearchBar.gif](http://upload-images.jianshu.io/upload_images/3066970-ea27e96a6d74ffc3.gif?imageMogr2/auto-orient/strip)
-一：原理
+![SearchBar.gif](https://github.com/GitPhoenix/SearchBar/blob/master/art/SearchBar.gif)
+<br>一：原理
 不透明度的范围0~255，根据轮播图的高度和轮播图滑出屏幕的高度+搜索条的高度求出百分比，然后计算出不透明度值，再设置搜索条的不透明度就行了。
 
 二：布局
